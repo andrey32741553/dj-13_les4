@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Каталог{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1>Сравнение телефонов</h1>
+            {% for item in items %}
+                <div class="col s12 m8">
+                    <div class="card">
+                        <p>Название: <strong>{{ item.name }}</strong></p>
+                        <p>Стоимость: {{ item.price }}</p>
+                        <p>Операционная система: {{ item.os }}</p>
+                        <p>Дисплей: {{ item.display }}</p>
+                        <p>Разрешение экрана: {{ item.resolution }}</p>
+                        <p>Процессор: {{ item.processor }}</p>
+                        <p>Оперативная память: {{ item.ram }}</p>
+                        <p>Встроенная память: {{ item.built_in_memory }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

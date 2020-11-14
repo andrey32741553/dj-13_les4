@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Телефон{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="header">
+            <h1>Телефон</h1>
+        </div>
+        <p>Название: <strong>{{ items.name }}</strong></p>
+        <p>Цена: {{ items.price }} р.</p>
+        <p>Дата релиза: {{ items.release_date|date:"SHORT_DATE_FORMAT" }}</p>
+        {% if items.lte_exists == True %}
+            <p>Наличие lte: да</p>
+        {% else %}
+            <p>Наличие lte: нет</p>
+        {% endif %}
+        <div class="card-image">
+            <img src={{ items.image }} alt={{ items.name }}>
+        </div>
+
+    </div>
+{% endblock %}
