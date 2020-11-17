@@ -17,6 +17,8 @@
                         <p>Процессор: {{ item.processor }}</p>
                         <p>Оперативная память: {{ item.ram }}</p>
                         <p>Встроенная память: {{ item.built_in_memory }}</p>
+                        <p>Особенности: {{ item.special.property_n1 }}</p>
+                        <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;{{ item.special.property_n2 }}</p>
                     </div>
                 </div>
             {% endfor %}
