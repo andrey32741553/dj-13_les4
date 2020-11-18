@@ -20,9 +20,7 @@ def show_catalog(request):
 
 def show_product(request, slug):
     template = 'product.html'
-    for item in phones:
-        result = item.slug
-        if slug == result:
-            context = {'items': item}
+    items = Phone.objects.get(slug__exact=slug)
+    context = {'items': items}
 
     return render(request, template, context)
