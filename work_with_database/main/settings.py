@@ -52,8 +52,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'import_phones',
-        'USER': 'andrey',
-        'PASSWORD': 'fylhtq32741553',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
