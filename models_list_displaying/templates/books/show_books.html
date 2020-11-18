@@ -18,7 +18,7 @@
         </div>
         <p>
             {% if prev_page %}<a class="button button-primary" href="{{ prev_page|date:"Y-m-d" }}">{{ prev_page|date:"Y-m-d" }}</a>{% endif %}
-            {{ current_page|date:"Y-m-d" }}
+            {{ current_page }}
             {% if next_page %}<a class="button button-primary" href="{{ next_page|date:"Y-m-d" }}">{{ next_page|date:"Y-m-d" }}</a>{% endif %}
         </p>
     </div>
